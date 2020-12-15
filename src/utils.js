@@ -1,5 +1,3 @@
-import values from "./values.json";
-
 export function classnames(...args) {
   if (!args || !args?.length) return "";
 
@@ -19,13 +17,3 @@ export function getRandom(arr, n) {
   }
   return result;
 }
-
-export const getInitialState = () => {
-  return getRandom(values, 25).reduce(
-    (total, current) => ({
-      ...total,
-      [current]: false,
-    }),
-    {}
-  );
-};

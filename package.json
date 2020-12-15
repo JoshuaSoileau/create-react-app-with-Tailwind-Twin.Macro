@@ -1,5 +1,5 @@
 {
-  "name": "hallmark-bingo",
+  "name": "create-react-app-with-tailwind-ywin-macro",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -21,10 +21,8 @@
     "twin.macro": "^2.0.4"
   },
   "scripts": {
-    "dev:styles": "tailwind build ./src/styles/index.css -o ./src/styles/tailwind.css",
-    "build:styles": "NODE_ENV=production tailwindcss build ./src/styles/index.css -o ./src/styles/tailwind.css",
-    "start": "npm run dev:styles && react-app-rewired start",
-    "build": "npm run build:styles && react-app-rewired build",
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
   },
