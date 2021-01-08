@@ -1,9 +1,9 @@
 // your index.js
 import WebFontLoader from "webfontloader";
 
-import fonts from "../fonts.json";
+import fonts from "./fonts.json";
 
-export const LoadFont = () => {
+export default function LoadFont() {
   WebFontLoader.load({
     google: {
       families: [
@@ -13,4 +13,4 @@ export const LoadFont = () => {
       ],
     },
   });
-};
+}

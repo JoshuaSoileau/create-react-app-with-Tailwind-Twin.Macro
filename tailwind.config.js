@@ -1,6 +1,15 @@
 const plugin = require("tailwindcss/plugin");
 const defaultTheme = require("tailwindcss/defaultTheme");
 const colors = require("tailwindcss/colors");
+const fonts = require("./src/fonts.json");
+
+const otherFonts = fonts.others.reduce(
+  (total, item) => ({
+    ...total,
+    [item.title]: [item.name],
+  }),
+  {}
+);
 
 let makeShadow = (name, rgb) => {
   let obj = {};
@@ -69,8 +78,9 @@ module.exports = {
         lightBlue: colors.lightBlue,
       },
       fontFamily: {
-        "sans-special": ["Noto Sans", ...defaultTheme.fontFamily.sans],
-        sans: ["Varela Round", ...defaultTheme.fontFamily.sans],
+        sans: [fonts.sans.name, ...defaultTheme.fontFamily.sans],
+        serif: [fonts.serif.name, ...defaultTheme.fontFamily.sans],
+        ...otherFonts,
       },
       fontSize: {
         "2xs": ["0.7rem", ".85rem"],
